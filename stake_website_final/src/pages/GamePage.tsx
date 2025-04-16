@@ -115,7 +115,7 @@ function GamePage() {
           <section>
             <h2 className="text-2xl font-bold text-blue-400 mb-6">Statistics</h2>
             <div className="bg-[#2A3543] rounded-xl p-8">
-              
+              {renderStatsComponent()}
             </div>
           </section>
 
