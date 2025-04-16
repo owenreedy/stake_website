@@ -3,7 +3,7 @@ import React from 'react';
 interface PlinkoStatsProps {}
 
 const PlinkoStats: React.FC<PlinkoStatsProps> = () => {
-  const [activeTab, setActiveTab] = React.useState<'low' | 'medium' | 'high'>('low');
+  const [activeTab, setActiveTab] = React.useState<'8' | '9' | '10' | '11' | '12' | '13' | '14' | '15' | '16'>('8');
 
   return (
     <div className="space-y-8">
@@ -34,109 +34,160 @@ const PlinkoStats: React.FC<PlinkoStatsProps> = () => {
       {/* Risk Level Tabs */}
       <div className="space-y-6">
         <div className="flex border-b border-gray-700">
+
           <button
             className={`py-2 px-4 font-medium ${
               activeTab === 'low' 
                 ? 'text-blue-400 border-b-2 border-blue-400' 
                 : 'text-gray-400 hover:text-gray-300'
             }`}
-            onClick={() => setActiveTab('low')}
+            onClick={() => setActiveTab('8')}
           >
-            Low Risk
+            8 Rows
           </button>
+
           <button
             className={`py-2 px-4 font-medium ${
               activeTab === 'medium' 
                 ? 'text-blue-400 border-b-2 border-blue-400' 
                 : 'text-gray-400 hover:text-gray-300'
             }`}
-            onClick={() => setActiveTab('medium')}
+            onClick={() => setActiveTab('9')}
           >
-            Medium Risk
+            9 Rows
           </button>
+
           <button
             className={`py-2 px-4 font-medium ${
               activeTab === 'high' 
                 ? 'text-blue-400 border-b-2 border-blue-400' 
                 : 'text-gray-400 hover:text-gray-300'
             }`}
-            onClick={() => setActiveTab('high')}
+            onClick={() => setActiveTab('10')}
           >
-            High Risk
+            10 Rows
           </button>
+          
+          <button
+            className={`py-2 px-4 font-medium ${
+              activeTab === 'high' 
+                ? 'text-blue-400 border-b-2 border-blue-400' 
+                : 'text-gray-400 hover:text-gray-300'
+            }`}
+            onClick={() => setActiveTab('11')}
+          >
+            11 Rows
+          </button>
+
+          <button
+            className={`py-2 px-4 font-medium ${
+              activeTab === 'high' 
+                ? 'text-blue-400 border-b-2 border-blue-400' 
+                : 'text-gray-400 hover:text-gray-300'
+            }`}
+            onClick={() => setActiveTab('12')}
+          >
+            12 Rows
+          </button>
+
+          <button
+            className={`py-2 px-4 font-medium ${
+              activeTab === 'high' 
+                ? 'text-blue-400 border-b-2 border-blue-400' 
+                : 'text-gray-400 hover:text-gray-300'
+            }`}
+            onClick={() => setActiveTab('13')}
+          >
+            13 Rows
+          </button>
+
+
+          <button
+            className={`py-2 px-4 font-medium ${
+              activeTab === 'high' 
+                ? 'text-blue-400 border-b-2 border-blue-400' 
+                : 'text-gray-400 hover:text-gray-300'
+            }`}
+            onClick={() => setActiveTab('14')}
+          >
+            14 Rows
+          </button>
+
+
+          <button
+            className={`py-2 px-4 font-medium ${
+              activeTab === 'high' 
+                ? 'text-blue-400 border-b-2 border-blue-400' 
+                : 'text-gray-400 hover:text-gray-300'
+            }`}
+            onClick={() => setActiveTab('15')}
+          >
+            15 Rows
+          </button>
+
+          <button
+            className={`py-2 px-4 font-medium ${
+              activeTab === 'high' 
+                ? 'text-blue-400 border-b-2 border-blue-400' 
+                : 'text-gray-400 hover:text-gray-300'
+            }`}
+            onClick={() => setActiveTab('16')}
+          >
+            16 Rows
+          </button>
+
+
         </div>
 
         {/* Low Risk Table */}
-        {activeTab === 'low' && (
+        {activeTab === '8' && (
           <div>
-            <p className="text-gray-300 mb-4">
-              For players looking to minimize volatility while playing Plinko, these options help manage your bankroll
-              while offering a more consistent gaming experience.
-            </p>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="text-left border-b border-gray-700">
-                    <th className="pb-4 text-gray-400">Risk/Pins</th>
-                    <th className="pb-4 text-gray-400"># of Destinations</th>
-                    <th className="pb-4 text-gray-400">Min Win</th>
-                    <th className="pb-4 text-gray-400">Max Win</th>
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/8 9</td>
+                    <td className="py-4 text-white">5</td>
                     <td className="py-4 text-white">0.5</td>
-                    <td className="py-4 text-white">5.6</td>
-                    <td className="py-4 text-white">-</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/9 10</td>
-                    <td className="py-4 text-white">0.7</td>
-                    <td className="py-4 text-white">5.6</td>
-                    <td className="py-4 text-white">-</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/10 11</td>
                     <td className="py-4 text-white">0.5</td>
-                    <td className="py-4 text-white">8.9</td>
-                    <td className="py-4 text-white">-</td>
+                    <td className="py-4 text-white">0.4</td>
+                    <td className="py-4 text-white">0.2</td>
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/11 12</td>
-                    <td className="py-4 text-white">0.7</td>
-                    <td className="py-4 text-white">8.4</td>
-                    <td className="py-4 text-white">-</td>
+                    <td className="py-4 text-white">4/6</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.3</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/12 13</td>
-                    <td className="py-4 text-white">0.5</td>
-                    <td className="py-4 text-white">10</td>
-                    <td className="py-4 text-white">-</td>
+                    <td className="py-4 text-white">3/7</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.1</td>  {/* Low */}
+                    <td className="py-4 text-white">1.3</td>  {/* Medium */}
+                    <td className="py-4 text-white">1.5</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/13 14</td>
-                    <td className="py-4 text-white">0.7</td>
-                    <td className="py-4 text-white">8.1</td>
-                    <td className="py-4 text-white">-</td>
+                    <td className="py-4 text-white">2/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.1</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">4.0</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/14 15</td>
-                    <td className="py-4 text-white">0.5</td>
-                    <td className="py-4 text-white">7.1</td>
-                    <td className="py-4 text-white">-</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/15 16</td>
-                    <td className="py-4 text-white">0.7</td>
-                    <td className="py-4 text-white">15</td>
-                    <td className="py-4 text-white">-</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Low/16 17</td>
-                    <td className="py-4 text-white">0.5</td>
-                    <td className="py-4 text-white">16</td>
-                    <td className="py-4 text-white">-</td>
+                    <td className="py-4 text-white">1/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">13.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">29.0</td>  {/* High */}
                   </tr>
                 </tbody>
               </table>
@@ -144,60 +195,119 @@ const PlinkoStats: React.FC<PlinkoStatsProps> = () => {
           </div>
         )}
 
-        {/* Medium Risk Table */}
-        {activeTab === 'medium' && (
+        {/* Low Risk Table */}
+        {activeTab === '9' && (
           <div>
-            <p className="text-gray-300 mb-4">
-              Medium-risk playing options offer a suitable choice for players seeking a balance between
-              risk and gaming excitement. These options provide an opportunity for greater wins while still
-              maintaining a manageable level of risk.
-            </p>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="text-left border-b border-gray-700">
-                    <th className="pb-4 text-gray-400">Risk/Pins</th>
-                    <th className="pb-4 text-gray-400"># of Destinations</th>
-                    <th className="pb-4 text-gray-400">Min Win</th>
-                    <th className="pb-4 text-gray-400">Max Win</th>
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Medium/8</td>
-                    <td className="py-4 text-white">9</td>
-                    <td className="py-4 text-white">0.4</td>
-                    <td className="py-4 text-white">13</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Medium/9</td>
-                    <td className="py-4 text-white">10</td>
+                    <td className="py-4 text-white">5/6</td>
                     <td className="py-4 text-white">0.5</td>
-                    <td className="py-4 text-white">18</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Medium/10</td>
-                    <td className="py-4 text-white">11</td>
-                    <td className="py-4 text-white">0.4</td>
-                    <td className="py-4 text-white">22</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Medium/14</td>
-                    <td className="py-4 text-white">15</td>
+                    <td className="py-4 text-white">0.7</td>
+                    <td className="py-4 text-white">0.5</td>
                     <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">58</td>
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Medium/15</td>
-                    <td className="py-4 text-white">16</td>
-                    <td className="py-4 text-white">0.3</td>
-                    <td className="py-4 text-white">88</td>
+                    <td className="py-4 text-white">4/7</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.9</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.6</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">Medium/16</td>
-                    <td className="py-4 text-white">17</td>
-                    <td className="py-4 text-white">0.3</td>
-                    <td className="py-4 text-white">110</td>
+                    <td className="py-4 text-white">3/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.6</td>  {/* Low */}
+                    <td className="py-4 text-white">1.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">2.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.0</td>  {/* Low */}
+                    <td className="py-4 text-white">4.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">7.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/10</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">18.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">43.0</td>  {/* High */}
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* Low Risk Table */}
+        {activeTab === '10' && (
+          <div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-left border-b border-gray-700">
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">6</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.4</td>
+                    <td className="py-4 text-white">0.2</td>
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">5/7</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.6</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.3</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">4/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.1</td>  {/* Low */}
+                    <td className="py-4 text-white">1.4</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.9</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">3/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.4</td>  {/* Low */}
+                    <td className="py-4 text-white">2.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">3.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/10</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">3.0</td>  {/* Low */}
+                    <td className="py-4 text-white">5.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">10.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/11</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">8.9</td>  {/* Low */}
+                    <td className="py-4 text-white">22.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">76.0</td>  {/* High */}
                   </tr>
                 </tbody>
               </table>
@@ -205,84 +315,371 @@ const PlinkoStats: React.FC<PlinkoStatsProps> = () => {
           </div>
         )}
 
-        {/* High Risk Table */}
-        {activeTab === 'high' && (
+
+        {/* Low Risk Table */}
+        {activeTab === '11' && (
           <div>
-            <p className="text-gray-300 mb-4">
-              For players who enjoy taking on more risk for the chance of higher wins, the high-risk playing
-              options are a perfect choice. These options come with increased risk, but the potential for
-              substantial wins is also greater.
-            </p>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="text-left border-b border-gray-700">
-                    <th className="pb-4 text-gray-400">Risk/Pins</th>
-                    <th className="pb-4 text-gray-400"># of Destinations</th>
-                    <th className="pb-4 text-gray-400">Min Win</th>
-                    <th className="pb-4 text-gray-400">Max Win</th>
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/8 9</td>
+                    <td className="py-4 text-white">6/7</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.7</td>
+                    <td className="py-4 text-white">0.5</td>
                     <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">29</td>
-                    <td className="py-4 text-white">-</td>
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/9 10</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">43</td>
-                    <td className="py-4 text-white">-</td>
+                    <td className="py-4 text-white">5/8</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.4</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/10</td>
-                    <td className="py-4 text-white">11</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">76</td>
+                    <td className="py-4 text-white">4/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.3</td>  {/* Low */}
+                    <td className="py-4 text-white">1.8</td>  {/* Medium */}
+                    <td className="py-4 text-white">1.4</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/11</td>
-                    <td className="py-4 text-white">12</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">120</td>
+                    <td className="py-4 text-white">3/10</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.9</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">5.2</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/12</td>
-                    <td className="py-4 text-white">13</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">170</td>
+                    <td className="py-4 text-white">2/11</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">3.0</td>  {/* Low */}
+                    <td className="py-4 text-white">6.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">14.0</td>  {/* High */}
                   </tr>
                   <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/13</td>
-                    <td className="py-4 text-white">14</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">260</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/14</td>
-                    <td className="py-4 text-white">15</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">420</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/15</td>
-                    <td className="py-4 text-white">16</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">620</td>
-                  </tr>
-                  <tr className="border-b border-gray-700/50">
-                    <td className="py-4 text-white">High/16</td>
-                    <td className="py-4 text-white">17</td>
-                    <td className="py-4 text-white">0.2</td>
-                    <td className="py-4 text-white">1,000</td>
+                    <td className="py-4 text-white">1/12</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">8.4</td>  {/* Low */}
+                    <td className="py-4 text-white">24.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">120.0</td>  {/* High */}
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
         )}
+
+
+        {/* Low Risk Table */}
+        {activeTab === '12' && (
+          <div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-left border-b border-gray-700">
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.4</td>
+                    <td className="py-4 text-white">0.2</td>
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">4/6</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.2</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">3/7</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.1</td>  {/* Low */}
+                    <td className="py-4 text-white">1.3</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.7</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.1</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">4.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">13.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">29.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.1</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">4.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">13.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">29.0</td>  {/* High */}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+
+        {/* Low Risk Table */}
+        {activeTab === '13' && (
+          <div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-left border-b border-gray-700">
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.4</td>
+                    <td className="py-4 text-white">0.2</td>
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">4/6</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.3</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">3/7</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.1</td>  {/* Low */}
+                    <td className="py-4 text-white">1.3</td>  {/* Medium */}
+                    <td className="py-4 text-white">1.5</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.1</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">4.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">13.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">29.0</td>  {/* High */}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+
+        {/* Low Risk Table */}
+        {activeTab === '14' && (
+          <div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-left border-b border-gray-700">
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.4</td>
+                    <td className="py-4 text-white">0.2</td>
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">4/6</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.3</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">3/7</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.1</td>  {/* Low */}
+                    <td className="py-4 text-white">1.3</td>  {/* Medium */}
+                    <td className="py-4 text-white">1.5</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.1</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">4.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">13.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">29.0</td>  {/* High */}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+
+        {/* Low Risk Table */}
+        {activeTab === '15' && (
+          <div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-left border-b border-gray-700">
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.4</td>
+                    <td className="py-4 text-white">0.2</td>
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">4/6</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.3</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">3/7</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.1</td>  {/* Low */}
+                    <td className="py-4 text-white">1.3</td>  {/* Medium */}
+                    <td className="py-4 text-white">1.5</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.1</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">4.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">13.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">29.0</td>  {/* High */}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+
+        {/* Low Risk Table */}
+        {activeTab === '16' && (
+          <div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-left border-b border-gray-700">
+                    <th className="pb-4 text-gray-400">Pins</th>
+                    <th className="pb-4 text-gray-400">Chance</th>
+                    <th className="pb-4 text-gray-400">low</th>
+                    <th className="pb-4 text-gray-400">medium</th>
+                    <th className="pb-4 text-gray-400">High</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.5</td>
+                    <td className="py-4 text-white">0.4</td>
+                    <td className="py-4 text-white">0.2</td>
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">4/6</td>  {/* pins */}
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.0</td>  {/* Low */}
+                    <td className="py-4 text-white">0.7</td>  {/* Medium */}
+                    <td className="py-4 text-white">0.3</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">3/7</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">1.1</td>  {/* Low */}
+                    <td className="py-4 text-white">1.3</td>  {/* Medium */}
+                    <td className="py-4 text-white">1.5</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">2/8</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">2.1</td>  {/* Low */}
+                    <td className="py-4 text-white">3.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">4.0</td>  {/* High */}
+                  </tr>
+                  <tr className="border-b border-gray-700/50">
+                    <td className="py-4 text-white">1/9</td>
+                    <td className="py-4 text-white">0.5</td>  {/* Chance */}
+                    <td className="py-4 text-white">5.6</td>  {/* Low */}
+                    <td className="py-4 text-white">13.0</td>  {/* Medium */}
+                    <td className="py-4 text-white">29.0</td>  {/* High */}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+
+        
       </div>
 
       {/* Visual Representation */}
