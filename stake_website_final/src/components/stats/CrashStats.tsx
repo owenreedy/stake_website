@@ -39,7 +39,7 @@ const CrashStats: React.FC<CrashStatsProps> = () => {
     { label: "RTP", value: "96%", subtext: "Return to Player percentage" },
     { label: "House Edge", value: "4%", subtext: "Casino's statistical advantage" },
     { label: "Volatility", value: "High", subtext: "Risk level of the game" },
-    { label: "Max Multiplier", value: "1000x", subtext: "Theoretical maximum multiplier" }
+    
   ];
 
   const crashProbabilities = [
