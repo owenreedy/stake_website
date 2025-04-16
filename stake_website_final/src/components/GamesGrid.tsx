@@ -18,7 +18,7 @@ const GameCard: React.FC<GameCardProps> = ({ name, slug, color, icon, players })
         style={{ background: `linear-gradient(to bottom, ${color}, ${color}CC)` }}
       >
         {/* Game icon or image */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-start justify-center pt-[12.5%]">
           <img 
             src={icon || `/images/games/${slug}.svg`} 
             alt={name}
@@ -31,16 +31,10 @@ const GameCard: React.FC<GameCardProps> = ({ name, slug, color, icon, players })
         </div>
         
         {/* Game name */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
+        <div className="absolute bottom-0 left-0 right-0 pb-6 px-3 text-center">
           <h3 className="text-white text-2xl font-bold tracking-wider">{name.toUpperCase()}</h3>
           <p className="text-white/80 text-xs">STAKE ORIGINALS</p>
         </div>
-      </div>
-      
-      {/* Player count */}
-      <div className="mt-2 flex items-center">
-        <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-        <span className="text-gray-300 text-sm">{players} playing</span>
       </div>
     </Link>
   );
