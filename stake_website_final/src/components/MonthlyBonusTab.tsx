@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const rakebackRates: Record<string, number> = {
+  Bronze: 2,
+  Silver: 5,
+  Gold: 10,
+  'Platinum I': 12,
+  'Platinum II': 15,
+  'Platinum III': 18,
+  'Platinum IV': 20,
+  'Platinum V': 25,
+  Diamond: 30,
+};
 
 const MonthlyBonusTab: React.FC = () => {
+  const [vipLevel, setVipLevel] = useState<string>('Bronze');
+  const bettingVolume = 10000;
+  const currentRakeback = rakebackRates[vipLevel];
+  const rakebackAmount = ((currentRakeback / 100) * bettingVolume).toFixed(2);
+
   return (
     <div className="space-y-8">
       <div className="bg-[#1A1E2E] rounded-lg p-6 shadow-lg">
@@ -9,18 +26,30 @@ const MonthlyBonusTab: React.FC = () => {
           Earn monthly rakeback based on your VIP level and betting activity. The higher your VIP level, the greater percentage of rakeback you'll receive each month.
         </p>
       </div>
-      
+
       <div className="bg-gradient-to-r from-purple-900 to-blue-900 rounded-lg p-6 shadow-lg">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div>
             <h2 className="text-xl font-bold text-white mb-2">Your Monthly Rakeback</h2>
-            <div className="text-3xl font-bold text-yellow-400">2%</div>
-            <p className="text-gray-300 mt-2">Next rakeback payment: 1st of next month</p>
-          </div>
-          <div className="mt-4 md:mt-0">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold">
-              View History
-            </button>
+            <label className="block text-gray-300 mb-2">
+              Select VIP Level:
+              <select
+                value={vipLevel}
+                onChange={(e) => setVipLevel(e.target.value)}
+                className="ml-2 p-1 bg-[#1A1E2E] text-white rounded"
+              >
+                {Object.keys(rakebackRates).map((level) => (
+                  <option key={level} value={level}>
+                    {level}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <div className="text-3xl font-bold text-yellow-400">{currentRakeback}%</div>
+            <p className="text-gray-300 mt-2">
+              Based on ${bettingVolume.toLocaleString()} betting volume: ${rakebackAmount}
+            </p>
+            <p className="text-gray-300 mt-1">Next rakeback payment: 1st of next month</p>
           </div>
         </div>
       </div>

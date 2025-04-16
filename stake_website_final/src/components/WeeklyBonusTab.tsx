@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const weeklyBonusData: Record<string, { percent: number; max: number }> = {
+  Bronze: { percent: 5, max: 50 },
+  Silver: { percent: 10, max: 100 },
+  Gold: { percent: 15, max: 200 },
+  'Platinum I': { percent: 20, max: 300 },
+  'Platinum II': { percent: 25, max: 500 },
+  'Platinum III': { percent: 30, max: 750 },
+  'Platinum IV': { percent: 35, max: 1000 },
+  'Platinum V': { percent: 40, max: 1500 },
+  Diamond: { percent: 50, max: 2500 },
+};
 
 const WeeklyBonusTab: React.FC = () => {
+  const [vipLevel, setVipLevel] = useState<string>('Bronze');
+  const depositAmount = 100;
+  const { percent, max } = weeklyBonusData[vipLevel];
+  const bonusAmount = Math.min((percent / 100) * depositAmount, max).toFixed(2);
+
   return (
     <div className="space-y-8">
       <div className="bg-[#1A1E2E] rounded-lg p-6 shadow-lg">
@@ -9,18 +26,29 @@ const WeeklyBonusTab: React.FC = () => {
           Claim your weekly reload bonus based on your VIP level. The higher your VIP level, the greater percentage bonus you'll receive each week.
         </p>
       </div>
-      
+
       <div className="bg-gradient-to-r from-purple-900 to-blue-900 rounded-lg p-6 shadow-lg">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div>
             <h2 className="text-xl font-bold text-white mb-2">Your Weekly Bonus</h2>
-            <div className="text-3xl font-bold text-yellow-400">5%</div>
-            <p className="text-gray-300 mt-2">Next claim available: 3 days</p>
-          </div>
-          <div className="mt-4 md:mt-0">
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-bold">
-              Claim Bonus
-            </button>
+            <label className="block text-gray-300 mb-2">
+              Select VIP Level:
+              <select
+                value={vipLevel}
+                onChange={(e) => setVipLevel(e.target.value)}
+                className="ml-2 p-1 bg-[#1A1E2E] text-white rounded"
+              >
+                {Object.keys(weeklyBonusData).map((level) => (
+                  <option key={level} value={level}>
+                    {level}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <div className="text-3xl font-bold text-yellow-400">{percent}%</div>
+            <p className="text-gray-300 mt-2">
+              Based on ${depositAmount.toLocaleString()} deposit: ${bonusAmount}
+            </p>
           </div>
         </div>
       </div>
