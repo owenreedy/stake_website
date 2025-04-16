@@ -75,7 +75,7 @@ function GamePage() {
     <div className="min-h-screen bg-[#1B2330] text-white p-6">
       <div className="max-w-7xl mx-auto">
         <nav className="mb-8">
-          <Link to="/" className="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+          <Link to="/stats" className="text-blue-400 hover:text-blue-300 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
             </svg>
