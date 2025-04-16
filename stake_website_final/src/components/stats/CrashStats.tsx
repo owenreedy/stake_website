@@ -80,7 +80,7 @@ const CrashStats: React.FC<CrashStatsProps> = () => {
         <input
           type="range"
           min="1"
-          max="5"
+          max="2.75"
           step="0.01"
           value={selectedMultiplier}
           onChange={(e) => setSelectedMultiplier(parseFloat(e.target.value))}

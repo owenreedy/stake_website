@@ -24,7 +24,7 @@ export const defaultGameContent: GameContentType = {
     "Collect your winnings if successful."
   ],
   strategy: [
-    "Start with smaller bets to understand the game mechanics.",
+    "Start with fake money to understand the game mechanics.",
     "Gradually increase your bets as you become more comfortable with the game.",
     "Set a budget and stick to it to ensure responsible gaming.",
     "Take advantage of bonuses and promotions to maximize your gameplay."
@@ -108,16 +108,10 @@ export const gameContent: Record<string, GameContentType> = {
       "A 'Blackjack' is an Ace and a 10-value card as the first two cards, paying 3:2."
     ],
     strategy: [
-      "Always stand on hard 17 or higher.",
-      "Always hit on hard 8 or lower.",
-      "Double down on 11 when the dealer shows 2-10.",
-      "Double down on 10 when the dealer shows 2-9.",
-      "Double down on 9 when the dealer shows 3-6.",
-      "Always split Aces and 8s.",
-      "Never split 10s or 5s.",
-      "Split 2s and 3s when the dealer shows 4-7.",
-      "Split 6s when the dealer shows 2-6.",
-      "Use a basic strategy chart for optimal play in all situations."
+      "start wit fake money to get a feel for the game.",
+      "Use a basic strategy chart for optimal play in all situations.",
+      "Once you've got the hang or it, start trying to pick up on hot streaks and cold streaks. When you get good at recognising them start changing you bet based on if te table is hot or cold",
+      "A more advanced strategy is to use card counting techniques, but this requires practice and is not foolproof. With this you can recognise hot and cold streaks easier and earlier",
     ],
     stats: {
       rtp: "99.43%",
@@ -140,13 +134,10 @@ export const gameContent: Record<string, GameContentType> = {
       "You can also set up automatic betting for consecutive rounds."
     ],
     strategy: [
-      "Start with smaller bets to get a feel for the game's rhythm and patterns.",
-      "Consider setting an auto cash-out at a reasonable multiplier (e.g., 1.5x-2.0x) for consistent returns.",
-      "Be cautious of extremely high multipliers with only small bets remaining – it's often bait.",
-      "Watch for consistent wins – they often precede an 'Instaloss' (crash between 1.00x and 1.04x).",
-      "Target the 1.05x - 1.25x range for consistent returns with lower risk.",
-      "Never chase losses with larger bets – stick to your strategy.",
-      "Consider waiting for an Instaloss before resuming betting."
+      "We advice you start off playing with fake money to get a feel for the game.",
+      "It is important to watc the leaderboards and seeing when other people are cashing out. The algorithm is designed to crash at random times, but it is possible to see patterns. Its main goal is to keep a balance in money so if everyone is cashing out early it will lower the crash out point to make some of them lose.",
+      "Dont pay attention to the large jumps. They are disiegned to bait people into going for a larger cash out. If you look at the leader boards when this happens everyone has already cashed out except for a few that are betting very low or fake money",
+      "It is improtant to raise your bet after a lose, and lower your cash out point. this will help you recuperate your losses.", 
     ],
     stats: {
       rtp: "96%",
@@ -203,7 +194,6 @@ export const gameContent: Record<string, GameContentType> = {
       "High Risk: Volatile gameplay with potential multipliers up to 1,000x",
       "More rows mean more pins that can change the trajectory, increasing randomness.",
       "Use the autoplay feature to maintain consistent betting patterns.",
-      "Toggle animations off for faster gameplay if you're playing multiple rounds.",
       "Use hotkeys (spacebar) for quicker reactions and to maximize plays."
     ],
     stats: {

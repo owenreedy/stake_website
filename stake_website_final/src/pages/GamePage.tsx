@@ -119,13 +119,7 @@ function GamePage() {
             </div>
           </section>
 
-          {/* Auto Bet Strategies Section */}
-          <section>
-            <h2 className="text-2xl font-bold text-blue-400 mb-6">Auto Bet Strategies</h2>
-            <div className="bg-[#2A3543] rounded-xl p-8">
-              
-            </div>
-          </section>
+          
 
           {/* Strategy Section */}
           <section>
