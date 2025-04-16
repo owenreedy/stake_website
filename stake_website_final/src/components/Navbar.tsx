@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           </div>
           
           <div className="flex">
-            <div className="hidden md:ml-6 md:flex md:space-x-4">
+            <div className="hidden md:flex md:items-center md:space-x-4">
               <Link
                 to="/"
                 className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-600 ${isActive('/')}`}
