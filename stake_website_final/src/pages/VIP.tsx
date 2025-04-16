@@ -13,8 +13,7 @@ const VIP: React.FC = () => {
       <div className="bg-[#1A1E2E] rounded-lg p-6 shadow-lg">
         <h1 className="text-2xl font-bold text-white mb-4">VIP Program</h1>
         <p className="text-gray-300">
-          Join our exclusive VIP program to unlock premium benefits, personalized support, and enhanced rewards.
-          Track your progress, claim weekly bonuses, and earn monthly rakeback based on your VIP level.
+          Information on Stake's VIP bonuses
         </p>
       </div>
       
