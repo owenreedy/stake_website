@@ -5,6 +5,7 @@ interface BetRow {
   betAmount: number;
   netLoss: number;
   neededAmount: number;
+  potentialProfit: number;
 }
 
 const BetCalculator: React.FC = () => {
@@ -12,6 +13,8 @@ const BetCalculator: React.FC = () => {
   const [raisePercentage, setRaisePercentage] = useState<string>('210');
   const [rowCount, setRowCount] = useState<number>(10);
   const [betRows, setBetRows] = useState<BetRow[]>([]);
+  const [multiplier, setMultiplier] = useState<string>('2.00');
+
   
   // Format number as currency
   const formatCurrency = (value: number): string => {
@@ -28,6 +31,7 @@ const BetCalculator: React.FC = () => {
     const calculateBets = () => {
       const initialBetValue = parseFloat(initialBet) || 1;
       const raisePercentageValue = parseFloat(raisePercentage) || 100;
+      const multiplierValue = parseFloat(multiplier) || 2;
       
       const rows: BetRow[] = [];
       let currentBet = initialBetValue;
@@ -48,7 +52,8 @@ const BetCalculator: React.FC = () => {
           betNumber: i,
           betAmount: currentBet,
           netLoss: totalLoss,
-          neededAmount: currentBet + totalLoss
+          neededAmount: currentBet + totalLoss,
+          potentialProfit: currentBet * multiplierValue - (currentBet + totalLoss)
         });
       }
       
@@ -114,7 +119,23 @@ const BetCalculator: React.FC = () => {
             <option value={50}>50 Rows</option>
           </select>
         </div>
+      
+        <div>
+          <label htmlFor="multiplier" className="block text-gray-300 mb-2">
+            Multiplier (e.g., 2 for 2x)
+          </label>
+          <input
+            id="multiplier"
+            type="number"
+            step="0.01"
+            min="1"
+            value={multiplier}
+            onChange={(e) => setMultiplier(e.target.value)}
+            className="w-full bg-gray-800 text-white border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
       </div>
+
       
       <div className="overflow-x-auto">
         <table className="w-full text-white">
@@ -124,6 +145,7 @@ const BetCalculator: React.FC = () => {
               <th className="px-4 py-2 text-left">Bet After Loss</th>
               <th className="px-4 py-2 text-left">Net Loss</th>
               <th className="px-4 py-2 text-left">Needed Amount</th>
+              <th className="px-4 py-2 text-left">Profit If Won</th>
             </tr>
           </thead>
           <tbody>
@@ -133,6 +155,7 @@ const BetCalculator: React.FC = () => {
                 <td className="px-4 py-2">{formatCurrency(row.betAmount)}</td>
                 <td className="px-4 py-2">{formatCurrency(row.netLoss)}</td>
                 <td className="px-4 py-2">{formatCurrency(row.neededAmount)}</td>
+                <td className="px-4 py-2">{formatCurrency(row.potentialProfit)}</td>
               </tr>
             ))}
           </tbody>
