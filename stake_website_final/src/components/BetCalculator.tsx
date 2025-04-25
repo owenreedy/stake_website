@@ -61,7 +61,7 @@ const BetCalculator: React.FC = () => {
     };
     
     calculateBets();
-  }, [initialBet, raisePercentage, rowCount]);
+  }, [initialBet, raisePercentage, rowCount, multiplier]);
   
   return (
     <div className="bg-[#1A1E2E] rounded-lg p-6 shadow-lg">
