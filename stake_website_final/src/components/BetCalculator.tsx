@@ -117,6 +117,7 @@ const BetCalculator: React.FC = () => {
             <option value={30}>30 Rows</option>
             <option value={40}>40 Rows</option>
             <option value={50}>50 Rows</option>
+            <option value={100}>100 Rows</option>
           </select>
         </div>
       
