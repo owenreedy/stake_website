@@ -68,7 +68,10 @@ function GamePage() {
     }
   };
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 08a97219e5450a063d4c7d2e2bbc171247b2d027
   return (
     <div className="min-h-screen bg-[#1B2330] text-white p-6">
       <div className="max-w-7xl mx-auto">
